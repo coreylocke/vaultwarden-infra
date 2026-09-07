@@ -1,0 +1,21 @@
+# Caddyfile example for Vaultwarden
+# Add this block to your existing Caddyfile on the droplet.
+# The vaultwarden container must be on the same Docker network as Caddy
+# (e.g. chaos-site_default).
+#
+# vaultwarden.lockeinvestments.net {
+#     reverse_proxy vaultwarden:80
+#     header / {
+#         Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+#         X-Content-Type-Options "nosniff"
+#         X-Frame-Options "SAMEORIGIN"
+#         Referrer-Policy "strict-origin-when-cross-origin"
+#     }
+#     request_body max_size 50MB
+# }
+#
+# For WebSocket notifications (desktop clients), also add:
+#
+# vaultwarden.lockeinvestments.net:8081 {
+#     reverse_proxy vaultwarden:3012
+# }

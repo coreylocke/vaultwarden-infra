@@ -1,0 +1,44 @@
+# Environment — secrets and credentials
+.env
+
+# Vaultwarden data (SQLite database, attachments, config)
+vw-data/
+
+# Generic data directory
+data/
+
+# SQLite databases
+*.sqlite3
+*.sqlite
+*.db
+
+# TLS certificates and private keys
+*.pem
+*.key
+*.crt
+certificates/
+certs/
+
+# Backup archives
+backups/*.tar.gz
+backups/*.zip
+backups/*.gpg
+
+# Secret and token files
+*secret*
+*token*
+*credential*
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
